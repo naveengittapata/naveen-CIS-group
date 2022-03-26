@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<%- include('./partials/header', {title: 'Home Page'}); %>
+
+<body>
+  <% include ./partials/navbar %>
+
+  <div class="container">
+    <h1><%= title %></h1>
+   
+    <% if (locals.user) { %>
+      <p>Hello there <%= locals.user.email %></p>
+    <%}%>
+
+  </div>
+  
+  <% include ./partials/scripts %>
+</body>
+
+</html>
